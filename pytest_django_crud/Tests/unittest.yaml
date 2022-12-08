@@ -1,0 +1,47 @@
+basic_get:
+  end_point: /basic/
+  method: get 
+  payload:
+    - expected_data:
+        content_validation: False
+        
+basic_post:
+  end_point: /basic/
+  method: post 
+  payload:
+    - id: 1
+      first_name: Apple
+      last_name: Ball
+      address: Hyderabad
+      roll_number: 3
+      mobile: '0123456789'
+      expected_data:
+        students:
+          first_name: Apple
+          last_name: Ball
+
+basic_delete:
+  end_point: /basic/4/
+  method: delete 
+  payload:
+    - expected_data:
+        students:
+          id: 4
+
+basic_patch:
+  end_point: /basic/2/update/
+  method: patch
+  payload:
+    - id: 2
+      first_name: Apple
+      last_name: pen
+      address: Japan
+      roll_number: 47
+      mobile: '0123456789'
+      content_type: 'application/json'
+      expected_data:
+        students:
+          first_name: Apple
+          last_name: pen
+          address: Japan
+          roll_number: 47
