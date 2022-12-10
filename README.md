@@ -1,6 +1,6 @@
 # Pytest_Basics
-* Contains all the subfolder 
-* for examples on
+* Contains all the topis related to pytest. 
+* Had fewer examples on
   * confest
   * Fixtures
   * Markers
