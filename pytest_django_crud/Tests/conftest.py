@@ -8,6 +8,16 @@ from yaml.loader import SafeLoader
 file_path = os.path.dirname(os.path.abspath(__file__))
 test_data_files = [file for file in os.listdir(file_path) if '.yaml' in file]
 
+# authorisation_payload = {
+#     "username": "my name is apple",
+#     "email": "apple@gail.com",
+#     "useremail": "apple@gmail.com",
+#     "password": "2222",
+#     "password2": "2222",
+#     "first_name": "",
+#     "last_name": "",
+#     "qahub_user": "",
+#     "access_roles": ""}
 
 def pytest_addoption(parser):
     """Method to add the option to ini."""
@@ -20,6 +30,16 @@ def pytest_addoption(parser):
 @pytest.fixture(scope='session', autouse=True)
 def django_db_setup():
     pass
+
+# @pytest.fixture(autouse=True)
+# def set_up(django_db_setup, request, pytestconfig):
+#     server = Client()
+#     payload = authorisation_payload
+#     authorisation_token = server.post('/register_user/',
+#                                       data=payload).json()['access']
+#     request.module.server = server
+#     request.module.auth_token = 'Bearer {}'.format(authorisation_token)
+#     yield server
 
 @pytest.fixture(autouse=True)
 def set_up(django_db_setup, request, pytestconfig):

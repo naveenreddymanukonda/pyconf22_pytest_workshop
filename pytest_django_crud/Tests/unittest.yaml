@@ -4,7 +4,21 @@ basic_get:
   payload:
     - expected_data:
         content_validation: False
-        
+
+basic_get_id:
+  end_point: /basic/4/
+  method: get 
+  payload:
+    - expected_data:
+        success: success
+        students: 
+          id: 4
+          first_name: Virat
+          last_name: Kohli
+          address: Delhi
+          roll_number: 101
+          mobile: '7654321'
+
 basic_post:
   end_point: /basic/
   method: post 

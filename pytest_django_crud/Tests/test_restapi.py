@@ -81,6 +81,9 @@ def test_valid_data(end_point,
             end_point, secure=True)
         validate_response_status_code(response.status_code)
         response_content = get_response_content(response)
+        logger.info('In Get')
+        logger.info(response_content)
+        logger.info(expected_data)
         if {'content_validation': False} == expected_data:
             return ' '
         if 'str' in str(type(expected_data)):
