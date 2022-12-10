@@ -1,0 +1,6 @@
+pytest-django
+pytest-yaml
+loguru
+pytest-html
+pytest-cov
+coverage
