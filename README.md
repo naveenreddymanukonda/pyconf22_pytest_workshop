@@ -1,3 +1,6 @@
+# Pytest_Basics
+* Contains all the subfolder for examples on confest, mock etc.
+
 # pytest_django_crud
 To demonstrate pytest for django rest framework
 ## How to run project?
